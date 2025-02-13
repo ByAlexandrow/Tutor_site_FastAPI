@@ -1,0 +1,384 @@
+{% extends 'base.html' %}
+{% block title %}Александрова Надежда - репетитор по русскому языку и литературе{% endblock title %}
+{% block content %}
+<style>
+.container-main-page {
+    margin-top: 10px;
+}
+.main-idea-1 {
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-align: center;
+}
+.first-line {
+    font-size: 45px;
+    line-height: 0.5em;
+}
+.second-line {
+    font-size: 30px;
+    line-height: 1em;
+}
+.first-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: end;
+    height: 510px;
+    margin-right: 10px;
+}
+.slogan {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 25px;
+    text-decoration: none;
+    margin-top: 80px;
+}
+.subscribe {
+    width: 266px;
+    height: 266px;
+    border-radius: 50%;
+    border-color: white;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: auto;
+}
+.button-text {
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    line-height: 0.9em;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+.button-text + .button-text {
+    margin-top: 5px;
+}
+.main-title-img {
+    width: 420px;
+    height: 510px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.main-idea-2 {
+    width: 900px;
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    justify-content: center;
+    text-align: right;
+}
+.third-line {
+    font-size: 45px;
+    line-height: 0.7em;
+}
+.second-block {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+.main-work-img {
+    width: 318px;
+    height: 318px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 25px;
+}
+.description {
+    width: 510px;
+    padding-top: 50px;
+    text-align: left;
+}
+.main-idea-3 {
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-align: left;
+    border-color: white;
+    width: 1300px;
+    height: 150px;
+    border-radius: 30px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+.forth-line {
+    font-size: 25px;
+    line-height: 1em;
+}
+.fiveth-line {
+    font-size: 45px;
+    line-height: 0.5em;
+}
+.squares-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+.square {
+    width: 340px;
+    height: 340px;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.square img {
+    padding-top: 20px;
+    width: 180px;
+    height: auto;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.square-work-img {
+    width: 340px;
+    height: 340px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+.square p {
+    width: 250px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    padding-bottom: 5px;
+    margin: 0;
+}
+.main-idea-4 {
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.main-idea-5 {
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    justify-content: center;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.price-title {
+    text-align: left;
+    font-size: 45px;
+    line-height: 0.5em;
+}
+.price-list {
+    background-color: #85735F;
+    border: 2px white solid;
+    border-radius: 20px;
+    width: auto;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+.price-line {
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 30px;
+    color: white;
+    margin: 0;
+    padding-left: 20px;
+}
+.main-price {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 28px;
+    margin: 0;
+}
+.price-btn {
+    width: 270px;
+    height: auto;
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 600;
+    font-style: bold;
+    font-size: 30px;
+    border-color: #85735F;
+}
+.connection-block {
+    padding-top: 50px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.connection-text {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+.connect {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: medium;
+    font-size: 25px;
+    text-align: left;
+    line-height: 0.5;
+    margin-bottom: 30px;
+}
+.main-idea-6 {
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-align: center;
+}
+.social-connection {
+    display: flex;
+    align-items: center;
+}
+</style>
+<div class="container-main-page">
+    <div class="main-idea-1">
+        <p class="first-line">ПОДГОТОВКА К ОГЭ/ЕГЭ</p>
+        <p class="second-line">ПО РУССКОМУ ЯЗЫКУ И ЛИТЕРАТУРЕ ONLINE</p>
+    </div>
+    {% for item in content %}
+        <div class="first-block">
+            <div class="left-column col-6">
+                <p class="slogan">Помогу сдать экзамены на высокий балл!</p>
+                <button class="subscribe">
+                    <p class="button-text">Записаться</p>
+                    <p class="button-text">на пробное занятие</p>
+                </button>
+            </div>
+            <img src="{{ item.title_img.url }}" alt="{{ item.img_name }}" class="main-title-img col-6">
+        </div>
+    {% endfor %}
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="main-idea-2 col-8" id="about-me">
+            <p class="third-line">СДАТЬ ЭКЗАМЕН ЛЕГКО</p>
+            <p class="third-line">С ПРАВИЛЬНЫМ НАСТАВНИКОМ</p>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    {% for item in content %}
+        <div class="second-block">
+            <div class="main-work-img col-6">
+                <img src="{{ item.work_img.url }}" alt="{{ item.img_name }}" class="main-work-img">
+            </div>
+            <div class="description col-6">
+                <p>{{ item.description|safe }}</p>
+            </div>
+        </div>
+    {% endfor %}
+    <div class="main-idea-3">
+        <p class="forth-line">ПРЕИМУЩЕСТВА</p>
+        <p class="fiveth-line">ПОЧЕМУ ВЫБИРАЮТ ИМЕННО МЕНЯ</p>
+    </div>
+    <div class="squares-container">
+        <div class="square">
+            <img class="square-img" src="/static/icons/individualism.png" alt="Individualism">
+            <p>Индивидуальный подход</p>
+        </div>
+        <div class="square">
+            <img class="square-img" src="/static/icons/experience.png" alt="Experience" style="padding-top: 90px;">
+            <p>Опыт подготовки к ЕГЭ/ОГЭ</p>
+        </div>
+        <div class="square">
+            <img class="square-img" src="/static/icons/list.png" alt="List">
+            <p>Знаю, как подготовить к экзаменам в МГУ</p>
+        </div>
+    </div>
+    <div class="squares-container" style="margin-bottom: 60px;">
+        <div class="square">
+            <img class="square-img" src="/static/icons/results.png" alt="Individualism" style="padding-top: 90px;">
+            <p>Результаты учеников</p>
+        </div>
+        {% for item in content %}
+            <img class="square-work-img" src="{{ item.work_img.url }}" alt="{{ item.img_name }}">
+        {% endfor %}
+        <div class="square">
+            <img class="square-img" src="/static/icons/schedule.png" alt="List">
+            <p>Гибкий график занятий</p>
+        </div>
+    </div>
+    <div class="main-idea-4">
+        <p class="first-line">ЧТО ОБО МНЕ ГОВОРЯТ</p>
+    </div>
+    <div class="main-idea-5">
+        <p class="price-title">СТОИМОСТЬ</p>
+        {% for price in prices %}
+            <div class="price-list">
+                <p class="price-line">ПАКЕТ “{{ price.price_name }}”</p>
+                <p class="main-price">{{ price.price }} руб.</p>
+                <button class="price-btn">ХОЧУ</button>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="main-idea-6">
+        <p class="first-line">КАК СО МНОЙ СВЯЗАТЬСЯ?</p>
+        {% for item in content %}
+          <div class="second-block">
+            <div class="main-work-img col-10">
+                <img src="{{ item.work_img.url }}" alt="{{ item.img_name }}" class="main-work-img">
+            </div>
+            <div class="connection-block col-2">
+                <p class="connection-text">Телефон:</p>
+                <p class="connect">8 904 698 33 44</p>
+                <p class="connection-text">Почта:</p>
+                <p class="connect">alexandrowa@mail.ru</p>
+                <div class="social-connection">
+                    <a href="..." target="_blank">
+                        <img src="/static/icons/tg.svg" alt="Telegram" style="width: 40px; height: 40px;">
+                    </a>
+                    <a href="..." target="_blank">
+                        <img src="/static/icons/vk.svg" alt="VK" style="width: 45px; height: 45px;">
+                    </a>
+                </div>
+                <br>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock%}

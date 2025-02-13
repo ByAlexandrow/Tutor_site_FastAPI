@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "Arkhip";
+    src: url('/static/fonts/Arkhip.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Actay";
+    src: url('/static/fonts/Actay.otf') format('opentype');
+}

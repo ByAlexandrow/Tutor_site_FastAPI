@@ -1,0 +1,138 @@
+.footer {
+    background-color: #85735F;
+    border: 2px white solid;
+    border-radius: 30px;
+    width: 1400px;
+    height: 225px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.logo {
+    width: 113px;
+    height: 100px;
+    margin-bottom: 10px;
+} 
+.title-logo-footer {
+    font-size: 22px;
+    font-family: "Arkhip", sans-serif;
+    font-weight: 400;
+    font-weight: normal;
+    margin-bottom: 5px;
+    color: white;
+    text-align: center;
+}
+.subtitle-logo-footer {
+    font-family: "Actay";
+    font-weight: 500;
+    font-weight: normal;
+    font-size: 13px;
+    text-align: left;
+    color: white;
+}
+.navbar-brand-footer {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navbar-brand-footer:hover {
+    color: white;
+}
+.footer-row.footer-links {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.footer-link {
+    margin-right: 35px;
+    font-size: 20px;
+    text-decoration: none;
+    color: inherit;
+}
+.footer-link:last-child {
+    margin-right: 0;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.phone-number {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 34px;
+    text-decoration: none;
+}
+.phone-number:hover {
+    text-decoration: none;
+}
+.email {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    text-decoration: none;
+    align-content: end;
+}
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+.social-icons img {
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .footer {
+        width: 320px !important;
+        height: 140px !important;
+        flex-direction: column;
+        align-items: center;
+        border: none !important;
+    }
+    .footer-column {
+        margin-bottom: 20px;
+    }
+    .logo {
+        width: 95px;
+        height: 85px;
+    } 
+    .title-logo-footer {
+        font-size: 18px !important;
+        white-space: nowrap;
+    }
+    .subtitle-logo-footer {
+        font-size: 12px !important;
+    }
+    .footer-row.footer-links {
+        display: none;
+    }
+    .contact-info {
+        align-items: center;
+    }
+    .phone-number {
+        font-size: 32px;
+    }
+    .phone-number:hover {
+        text-decoration: none;
+    }
+    .email {
+        font-size: 22px;
+    }
+    .social-icons img {
+        cursor: pointer;
+    }
+}

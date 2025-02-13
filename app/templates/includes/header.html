@@ -1,0 +1,113 @@
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/header.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+{% endblock %}
+<header class="header">
+    <nav class="navbar navbar-expand nav-ex-header">
+        <div class="container header-container">
+            <a class="navbar-brand" href="{{ url_for('homepage:index') }}">
+                <div class="header-logo-container">
+                    <img src="{{ url_for('static', path='icons/logo.svg') }}" alt="Александрова Надежда" class="header-logo">
+                    <div class="header-text-container">
+                        <span class="title-logo-header">АЛЕКСАНДРОВА НАДЕЖДА</span>
+                        <span class="subtitle-logo-header">Ваш репетитор по русскому и литературе</span>
+                    </div>
+                </div>
+            </a>
+            <img src="{{ url_for('static', path='icons/menu.svg') }}" alt="Toggle-Menu" class="toggle-menu-icon">
+            <div class="menu-links">
+                <ul>
+                    <li class="header-nav-item">
+                        <a class="nav-link" href="{{ url_for('homepage:index') }}#about-me">
+                            Обо мне
+                        </a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a class="nav-link" href="{{ url_for('homepage:index') }}#advantages">
+                            Преимущества
+                        </a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a class="nav-link" href="{{ url_for('homepage:index') }}#feedback">
+                            Отзывы
+                        </a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a class="nav-link" href="{{ url_for('homepage:index') }}#pricelist">
+                            Стоимость
+                        </a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a class="nav-link" href="{{ url_for('homepage:index') }}#contacts">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="head-nav navbar-nav ms-auto">
+                    <li class="header-nav-item">
+                        <a class="nav-link" href="{{ url_for('homepage:index') }}#about">
+                            Обо мне
+                        </a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a class="nav-link" href="{{ url_for('homepage:index') }}#advantages">
+                            Преимущества
+                        </a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a class="nav-link" href="{{ url_for('homepage:index') }}#feedback">
+                            Отзывы
+                        </a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a class="nav-link" href="{{ url_for('homepage:index') }}#pricelist">
+                            Стоимость
+                        </a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a class="nav-link" href="{{ url_for('homepage:index') }}#contacts">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var aboutProjectLink = document.querySelector('a[href="{{ url_for('homepage:index') }}#about"]');
+        if (aboutProjectLink) {
+            aboutProjectLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                var targetUrl = this.href;
+                var targetId = targetUrl.split('#')[1];
+
+                if (window.location.pathname !== "{{ url_for('homepage:index') }}") {
+                    window.location.href = targetUrl;
+                } else {
+                    var targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        }
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleMenuIcon = document.querySelector('.toggle-menu-icon');
+        const menuLinks = document.querySelector('.menu-links');
+    
+        toggleMenuIcon.addEventListener('click', function() {
+            if (menuLinks.style.display === 'block') {
+                menuLinks.style.display = 'none';
+            } else {
+                menuLinks.style.display = 'block';
+            }
+        });
+    });
+</script>

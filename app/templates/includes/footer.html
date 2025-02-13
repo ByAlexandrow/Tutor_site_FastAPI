@@ -1,0 +1,42 @@
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/footer.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+{% endblock %}
+<footer class="footer">
+    <div class="footer-column">
+        <a class="navbar-brand-footer" href="{{ url_for('homepage:index') }}">
+            <img src="/static/icons/logo.svg" alt="Александрова Надежда" class="logo">
+            <span class="title-logo-footer">АЛЕКСАНДРОВА НАДЕЖДА</span>
+            <span class="subtitle-logo-footer">Ваш репетитор по русскому и литературе</span>
+        </a>
+    </div>
+    <div class="footer-row footer-links">
+        <a class="nav-link footer-link" href="{{ url_for('homepage:index') }}#about-me">
+            Обо мне
+        </a>
+        <a class="nav-link footer-link" href="{{ url_for('homepage:index') }}#advantages">
+            Преимущества
+        </a>
+        <a class="nav-link footer-link" href="{{ url_for('homepage:index') }}#feedback">
+            Отзывы
+        </a>
+        <a class="nav-link footer-link" href="{{ url_for('homepage:index') }}#pricelist">
+            Стоимость
+        </a>
+        <a class="nav-link footer-link" href="{{ url_for('homepage:index') }}#contacts">
+            Контакты
+        </a>
+    </div>
+    <div class="footer-column contact-info">
+        <a href="tel:+79046983344" class="phone-number">8 904 698 33 44</a>
+        <a href="mailto:example@example.com" class="email">aleksandrova@mail.ru</a>
+        <div class="social-icons">
+            <a href="..." target="_blank">
+                <img src="/static/icons/tg.svg" alt="Telegram" style="width: 40px; height: 40px;">
+            </a>
+            <a href="..." target="_blank">
+                <img src="/static/icons/vk.svg" alt="VK" style="width: 45px; height: 45px;">
+            </a>
+        </div>
+    </div>
+</footer>
