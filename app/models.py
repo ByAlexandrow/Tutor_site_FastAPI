@@ -6,7 +6,10 @@ class Tutor(Base):
     __tablename__ = 'tutor_bio'
 
     id = Column(Integer, primary_key=True)
-    title = Column(String, nullable=False)
+    title_img = Column(String, nullable=False)
+    work_img = Column(String, nullable=False)
+    best_choice_img = Column(String, nullable=False)
+    contact_img = Column(String, nullable=False)
     description = Column(Text, nullable=False)
 
 

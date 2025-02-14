@@ -6,6 +6,7 @@
     z-index: 1000;
 }
 .header-logo-container {
+    color: white;
     display: flex;
     align-items: center;
 }

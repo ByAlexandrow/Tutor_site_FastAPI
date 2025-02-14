@@ -6,11 +6,14 @@ from fastapi.staticfiles import StaticFiles
 
 from app.database import engine, Base, get_db
 from app.routers import tutor, pricelist
+from app.admin import init_admin
 
 from . import crud
 
 
 app = FastAPI()
+
+init_admin(app, engine)
 
 templates = Jinja2Templates(directory="app/templates")
 

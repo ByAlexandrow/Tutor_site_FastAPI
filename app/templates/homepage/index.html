@@ -1,299 +1,25 @@
 {% extends 'base.html' %}
 {% block title %}Александрова Надежда - репетитор по русскому языку и литературе{% endblock title %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/index.css') }}">
+{% endblock %}
 {% block content %}
-<style>
-.container-main-page {
-    margin-top: 10px;
-}
-.main-idea-1 {
-    font-family: "Cormorant Unicase", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    text-align: center;
-}
-.first-line {
-    font-size: 45px;
-    line-height: 0.5em;
-}
-.second-line {
-    font-size: 30px;
-    line-height: 1em;
-}
-.first-block {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-top: 50px;
-    margin-bottom: 80px;
-}
-.left-column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: end;
-    height: 510px;
-    margin-right: 10px;
-}
-.slogan {
-    color: white;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 25px;
-    text-decoration: none;
-    margin-top: 80px;
-}
-.subscribe {
-    width: 266px;
-    height: 266px;
-    border-radius: 50%;
-    border-color: white;
-    background-color: rgba(0, 0, 0, 0);
-    margin-top: auto;
-}
-.button-text {
-    font-family: "Cormorant Unicase", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    text-align: center;
-    font-size: 25px;
-    line-height: 0.9em;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-}
-.button-text + .button-text {
-    margin-top: 5px;
-}
-.main-title-img {
-    width: 420px;
-    height: 510px;
-    border-radius: 20px;
-    object-fit: cover;
-}
-.main-idea-2 {
-    width: 900px;
-    font-family: "Cormorant Unicase", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    justify-content: center;
-    text-align: right;
-}
-.third-line {
-    font-size: 45px;
-    line-height: 0.7em;
-}
-.second-block {
-    color: white;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 80px;
-}
-.main-work-img {
-    width: 318px;
-    height: 318px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 25px;
-}
-.description {
-    width: 510px;
-    padding-top: 50px;
-    text-align: left;
-}
-.main-idea-3 {
-    font-family: "Cormorant Unicase", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    text-align: left;
-    border-color: white;
-    width: 1300px;
-    height: 150px;
-    border-radius: 30px;
-    border-style: solid;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 20px;
-}
-.forth-line {
-    font-size: 25px;
-    line-height: 1em;
-}
-.fiveth-line {
-    font-size: 45px;
-    line-height: 0.5em;
-}
-.squares-container {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 50px;
-    margin-top: 40px;
-}
-.square {
-    width: 340px;
-    height: 340px;
-    border-radius: 30px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0);
-    text-align: center;
-    border: 1px solid white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-.square img {
-    padding-top: 20px;
-    width: 180px;
-    height: auto;
-    margin-bottom: 10px;
-    align-items: center;
-}
-.square-work-img {
-    width: 340px;
-    height: 340px;
-    border-radius: 30px;
-    object-fit: cover;
-}
-.square p {
-    width: 250px;
-    color: white;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 24px;
-    padding-bottom: 5px;
-    margin: 0;
-}
-.main-idea-4 {
-    font-family: "Cormorant Unicase", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    text-align: center;
-    margin-bottom: 50px;
-}
-.main-idea-5 {
-    font-family: "Cormorant Unicase", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    justify-content: center;
-    margin-bottom: 50px;
-    text-align: center;
-}
-.price-title {
-    text-align: left;
-    font-size: 45px;
-    line-height: 0.5em;
-}
-.price-list {
-    background-color: #85735F;
-    border: 2px white solid;
-    border-radius: 20px;
-    width: auto;
-    height: 120px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    padding: 0 20px;
-}
-.price-line {
-    font-family: "Cormorant Unicase", serif;
-    font-weight: 700;
-    font-style: bold;
-    font-size: 30px;
-    color: white;
-    margin: 0;
-    padding-left: 20px;
-}
-.main-price {
-    color: white;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 28px;
-    margin: 0;
-}
-.price-btn {
-    width: 270px;
-    height: auto;
-    font-family: "Cormorant Unicase", serif;
-    font-weight: 600;
-    font-style: bold;
-    font-size: 30px;
-    border-color: #85735F;
-}
-.connection-block {
-    padding-top: 50px;
-    padding-left: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-}
-.connection-text {
-    color: white;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 17px;
-    text-align: left;
-    margin-bottom: 5px;
-}
-.connect {
-    color: white;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: medium;
-    font-size: 25px;
-    text-align: left;
-    line-height: 0.5;
-    margin-bottom: 30px;
-}
-.main-idea-6 {
-    font-family: "Cormorant Unicase", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    text-align: center;
-}
-.social-connection {
-    display: flex;
-    align-items: center;
-}
-</style>
 <div class="container-main-page">
-    <div class="main-idea-1">
-        <p class="first-line">ПОДГОТОВКА К ОГЭ/ЕГЭ</p>
-        <p class="second-line">ПО РУССКОМУ ЯЗЫКУ И ЛИТЕРАТУРЕ ONLINE</p>
+    <div class="preparing-for">
+        <p class="oge-ege">ПОДГОТОВКА К ОГЭ/ЕГЭ</p>
+        <p class="rus-and-lit">ПО РУССКОМУ ЯЗЫКУ И ЛИТЕРАТУРЕ ONLINE</p>
     </div>
-    {% for item in content %}
-        <div class="first-block">
-            <div class="left-column col-6">
-                <p class="slogan">Помогу сдать экзамены на высокий балл!</p>
-                <button class="subscribe">
-                    <p class="button-text">Записаться</p>
-                    <p class="button-text">на пробное занятие</p>
-                </button>
-            </div>
-            <img src="{{ item.title_img.url }}" alt="{{ item.img_name }}" class="main-title-img col-6">
+    <div class="first-block">
+        <div class="left-column col-7">
+            <p class="slogan">Помогу сдать экзамены на высокий балл!</p>
+            <button class="animated-button">
+                <p class="button-text">Записаться</p>
+                <p class="button-text">на пробное занятие</p>
+            </button>
         </div>
-    {% endfor %}
-    <div class="row">
+        <img src="{{ url_for('static', path='media/title.jpg') }}" alt="Титульное" class="col-6">
+    </div>
+    <!-- <div class="row">
         <div class="col-1"></div>
         <div class="main-idea-2 col-8" id="about-me">
             <p class="third-line">СДАТЬ ЭКЗАМЕН ЛЕГКО</p>
@@ -379,6 +105,6 @@
             </div>
           </div>
         {% endfor %}
-    </div>
+    </div> -->
 </div>
 {% endblock%}
