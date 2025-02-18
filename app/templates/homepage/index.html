@@ -17,27 +17,33 @@
                 <p class="button-text">на пробное занятие</p>
             </button>
         </div>
-        <img src="{{ url_for('static', path='media/title.jpg') }}" alt="Титульное" class="col-6">
+        <img src="{{ url_for('static', path='media/title.jpg') }}" alt="Title" class="col-6">
     </div>
-    <!-- <div class="row">
+    <div class="row">
+        <p class="about-me">ОБО МНЕ</p>
         <div class="col-1"></div>
-        <div class="main-idea-2 col-8" id="about-me">
-            <p class="third-line">СДАТЬ ЭКЗАМЕН ЛЕГКО</p>
-            <p class="third-line">С ПРАВИЛЬНЫМ НАСТАВНИКОМ</p>
+        <div class="second-block col-8" id="about-me">
+            <p class="second-block-p">СДАТЬ ЭКЗАМЕН ЛЕГКО</p>
+            <p class="second-block-p">С ПРАВИЛЬНЫМ НАСТАВНИКОМ</p>
         </div>
         <div class="col-3"></div>
     </div>
-    {% for item in content %}
-        <div class="second-block">
-            <div class="main-work-img col-6">
-                <img src="{{ item.work_img.url }}" alt="{{ item.img_name }}" class="main-work-img">
-            </div>
-            <div class="description col-6">
-                <p>{{ item.description|safe }}</p>
-            </div>
+    <div class="second-block-description">
+        <div class="work-img col-6">
+            <img src="{{ url_for('static', path='media/title.jpg') }}" alt="Working" class="work-img">
         </div>
-    {% endfor %}
-    <div class="main-idea-3">
+        <div class="description col-6">
+            <p>Text Text Text Text Text Text Text Text Text Text Text Text Text TextText  Text Text Text Text Text Text Text Text Text TextText Text Text TextText TextTextTextText Text Text Text Text TextTextText Text Text Text Text Text TextTextText</p>
+        </div>
+    </div>
+    <div class="row link">
+        <div class="col-2"></div>
+        <button class="button-link">
+            Подробнее обо мне
+            <img src="/static/icons/tg.svg" alt="Working" class="work-img" style="width: 40px; height: 40px;">
+        </button>
+    </div>
+    <!-- <div class="main-idea-3">
         <p class="forth-line">ПРЕИМУЩЕСТВА</p>
         <p class="fiveth-line">ПОЧЕМУ ВЫБИРАЮТ ИМЕННО МЕНЯ</p>
     </div>
