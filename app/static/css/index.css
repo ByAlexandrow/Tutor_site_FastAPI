@@ -158,6 +158,83 @@
     color: white;
     text-align: center;
     margin-bottom: 80px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), 0 2px 5px rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.button-link:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4), 0 4px 10px rgba(255, 255, 255, 0.6);
+    transform: scale(1);
+}
+.third-block {
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-align: left;
+    border-color: white;
+    width: 1300px;
+    height: 150px;
+    border-radius: 30px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+.advantages {
+    font-size: 25px;
+    line-height: 1em;
+}
+.choice {
+    font-size: 45px;
+    line-height: 0.5em;
+}
+.question_mark {
+    width: 33px;
+    height: 60px;
+    display: none;
+}
+.squares-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+.square {
+    width: 340px;
+    height: 340px;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.square img {
+    padding-top: 20px;
+    width: 180px;
+    height: auto;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.square-work-img {
+    width: 340px;
+    height: 340px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+.square p {
+    width: 250px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    padding-bottom: 5px;
+    margin: 0;
 }
 @media (max-width: 768px) {
     .container-main-page {
@@ -258,5 +335,44 @@
         color: white;
         text-align: center;
         margin-bottom: 80px;
+    }
+    .third-block {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        margin-bottom: 35px;
+    }
+    .advantages {
+        font-size: 18px;
+        line-height: 1em;
+    }
+    .choice {
+        width: 295px;
+        height: 60px;
+        font-size: 30px;
+        line-height: 0.7em;
+    }
+    .squares-container {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0px;
+        margin-top: 5px;
+    }
+    .square {
+        width: 290px;
+        height: 290px;
+        margin-bottom: 20px;
+    }
+    .square img {
+        width: 150px;
+    }
+    .square-work-img {
+        width: 290px;
+        height: 290px;
+        margin-bottom: 20px;
+    }
+    .square p {
+        width: 100%;
+        font-size: 20px;
     }
 }

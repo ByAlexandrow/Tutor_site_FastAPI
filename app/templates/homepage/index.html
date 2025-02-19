@@ -43,9 +43,9 @@
             <img src="/static/icons/tg.svg" alt="Working" class="work-img" style="width: 40px; height: 40px;">
         </button>
     </div>
-    <!-- <div class="main-idea-3">
-        <p class="forth-line">ПРЕИМУЩЕСТВА</p>
-        <p class="fiveth-line">ПОЧЕМУ ВЫБИРАЮТ ИМЕННО МЕНЯ</p>
+    <div class="third-block">
+        <p class="advantages">ПРЕИМУЩЕСТВА</p>
+        <p class="choice">ПОЧЕМУ ВЫБИРАЮТ ИМЕННО МЕНЯ<img src="/static/icons/question_mark.svg" class="question_mark"></p>
     </div>
     <div class="squares-container">
         <div class="square">
@@ -66,15 +66,13 @@
             <img class="square-img" src="/static/icons/results.png" alt="Individualism" style="padding-top: 90px;">
             <p>Результаты учеников</p>
         </div>
-        {% for item in content %}
-            <img class="square-work-img" src="{{ item.work_img.url }}" alt="{{ item.img_name }}">
-        {% endfor %}
+        <img class="square-work-img" src="{{ url_for('static', path='media/title.jpg') }}" alt="Advantages">
         <div class="square">
             <img class="square-img" src="/static/icons/schedule.png" alt="List">
             <p>Гибкий график занятий</p>
         </div>
     </div>
-    <div class="main-idea-4">
+    <!-- <div class="main-idea-4">
         <p class="first-line">ЧТО ОБО МНЕ ГОВОРЯТ</p>
     </div>
     <div class="main-idea-5">
