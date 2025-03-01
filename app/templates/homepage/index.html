@@ -72,8 +72,12 @@
             <p>Гибкий график занятий</p>
         </div>
     </div>
-    <!-- <div class="main-idea-4">
-        <p class="first-line">ЧТО ОБО МНЕ ГОВОРЯТ</p>
+    <!-- <div class="feedback">
+        <div class="feedback-description col-4">
+            <p class="feedback-description">ЧТО ОБО МНЕ ГОВОРЯТ</p>
+        </div>
+        <div class="feedback-about col-8">
+        </div>
     </div>
     <div class="main-idea-5">
         <p class="price-title">СТОИМОСТЬ</p>
@@ -84,15 +88,14 @@
                 <button class="price-btn">ХОЧУ</button>
             </div>
         {% endfor %}
-    </div>
-    <div class="main-idea-6">
-        <p class="first-line">КАК СО МНОЙ СВЯЗАТЬСЯ?</p>
-        {% for item in content %}
-          <div class="second-block">
-            <div class="main-work-img col-10">
-                <img src="{{ item.work_img.url }}" alt="{{ item.img_name }}" class="main-work-img">
+    </div> -->
+    <div class="connection">
+        <p class="connection-title">КАК СО МНОЙ СВЯЗАТЬСЯ?</p>
+        <div>
+            <div class="connection-block col-7">
+                <img src="{{ url_for('static', path='media/title.jpg') }}" alt="Connection" class="connection-img">
             </div>
-            <div class="connection-block col-2">
+            <div class="connection-block col-5">
                 <p class="connection-text">Телефон:</p>
                 <p class="connect">8 904 698 33 44</p>
                 <p class="connection-text">Почта:</p>
@@ -105,10 +108,8 @@
                         <img src="/static/icons/vk.svg" alt="VK" style="width: 45px; height: 45px;">
                     </a>
                 </div>
-                <br>
             </div>
-          </div>
-        {% endfor %}
-    </div> -->
+        </div>
+    </div>
 </div>
 {% endblock%}
